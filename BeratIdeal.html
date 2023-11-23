@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Hitung Berat Badang Ideal</title>
+    </head>
+    <body>
+        <h1>Menghitung Berat Badan Ideal</h1>
+        <table>           
+            <tr>
+                <td>Berat Badan Pria Ideal</td>
+                <td> :</td>
+                <td><input type="number" placeholder="tinggi badan (cm)" id="tinggip"></td>
+            </tr>
+            <tr>
+                <td><button onclick="Pria()">Lihat</button></td>
+            </tr>
+            <tr>
+                <td><p id="lihatp">Berat Badan Ideal Pria</p></td>
+            </tr>
+            <tr>
+                <td>Berat Badan Wanita Ideal</td>
+                <td> :</td>
+                <td><input type="number" placeholder="tinggi badan (cm)" id="tinggiw"></td>
+            </tr>
+            <tr>
+                <td><button onclick="Wanita()">Lihat</button></td>
+            </tr>
+            <tr>
+                <td><p id="lihatw">Berat Badan Ideal Wanita</p></td>
+            </tr>
+        </table>
+    </body>
+</html>
+<script>
+    function Pria(){
+        var tinggip = document.getElementById('tinggip').value;
+        var idealp = ((tinggip - 100) - (tinggip - 100) * 0.1);
+        document.getElementById('lihatp').innerHTML = (idealp + " kg");
+    }
+
+    function Wanita(){
+        var tinggiw = document.getElementById('tinggiw').value;
+        var idealw = ((tinggiw - 100) - (tinggiw - 100) * 0.15);
+        document.getElementById('lihatw').innerHTML = (idealw + " kg");
+    }
+</script>
